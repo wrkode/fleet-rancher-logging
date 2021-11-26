@@ -1,0 +1,12 @@
+defaultNamespace: cattle-logging-system
+namespace: cattle-logging-system
+helm:
+  repo: https://charts.rancher.io
+  chart: rancher-logging-crd
+  version: 100.0.0+up3.12.0
+  releaseName: rancher-logging-crd
+  values:
+    additionalLoggingSources:
+      aks:
+        enabled: true
+

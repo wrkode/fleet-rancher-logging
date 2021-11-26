@@ -9,3 +9,5 @@ helm:
     additionalLoggingSources:
       aks:
         enabled: true
+dependsOn:
+  - rancher-logging-crd
