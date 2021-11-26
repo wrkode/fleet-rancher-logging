@@ -9,4 +9,4 @@ helm:
       aks:
         enabled: true
 dependsOn:
-  - rancher-logging-crd
+  - name: rancher-logging-rancher-logging-crd
