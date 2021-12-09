@@ -1,0 +1,6 @@
+defaultNamespace: elastic-system
+helm:
+  repo: https://helm.elastic.co
+  chart: elasticsearch
+  version: 6.4.2
+  releaseName: elasticsearch

@@ -1,0 +1,11 @@
+apiVersion: logging.banzaicloud.io/v1beta1
+kind: ClusterOutput
+metadata:
+  name: elastic
+  namespace: cattle-logging-system
+spec:
+  awsElasticsearch:
+    endpoint:
+      url: http://elasticsearch.svc.elastic-system.cluster.local:9200
+status:
+  active: false
