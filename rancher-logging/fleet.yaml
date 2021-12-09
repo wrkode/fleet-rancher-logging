@@ -9,4 +9,4 @@ helm:
       aks:
         enabled: true
 dependsOn:
-  - name: rancher-logging-rancher-logging-crd
+  - name: elastic-cluster-output-rancher-logging-crd
