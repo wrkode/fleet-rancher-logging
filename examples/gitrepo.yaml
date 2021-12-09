@@ -4,14 +4,12 @@ metadata:
   name: elastic-cluster-output
   namespace: fleet-default
 spec:
-  branch: contests
+  branch: contests-invalid
   clientSecretName: gitrepo-auth-xnbcn
   insecureSkipTLSVerify: false
   paths:
   - /eck
   - /cluster-output
-  - /rancher-logging
-  - /rancher-logging-crd
   repo: https://github.com/belgaied2/fleet-rancher-logging.git
   targets:
   - clusterName: c-lsj9p
