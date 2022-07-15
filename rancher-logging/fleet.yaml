@@ -2,11 +2,30 @@ defaultNamespace: cattle-logging-system
 helm:
   repo: https://charts.rancher.io
   chart: rancher-logging
-  version: 100.0.0+up3.12.0
+  version: 100.1.2+up3.17.4
   releaseName: rancher-logging
-  values:
-    additionalLoggingSources:
-      aks:
-        enabled: true
+targetCustomizations:
+- name: development
+  helm:
+    values:
+      additionalLoggingSources:
+        aks:
+          enabled: true
+        rke2:
+          enabled: true
+  clusterSelector:
+    matchLabels:
+      env: dev
+- name: production
+  helm:
+    values:
+      additionalLoggingSources:
+        eks:
+          enabled: true
+        rke2:
+          enabled: true
+  clusterSelector:
+    matchLabels:
+      env: prod
 dependsOn:
   - name: rancher-logging-rancher-logging-crd
