@@ -11,7 +11,7 @@ spec:
   - /rancher-logging-crd/
   - /rancher-logging/
   paused: false
-  repo: https://github.com/wrkode/fleet-rancher-logging.git
+  repo: https://github.com/belgaied2/fleet-rancher-logging.git
   targets:
   - name: dev
     clusterSelector:
