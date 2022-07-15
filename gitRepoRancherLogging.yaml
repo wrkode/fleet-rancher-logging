@@ -1,0 +1,24 @@
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: rancher-logging
+  namespace: fleet-default
+spec:
+  branch: main
+  forceSyncGeneration: 3
+  insecureSkipTLSVerify: false
+  paths:
+  - /rancher-logging-crd/
+  - /rancher-logging/
+  paused: false
+  repo: https://github.com/wrkode/fleet-rancher-logging.git
+  targets:
+  - name: dev
+    clusterSelector:
+      matchLabels:
+        env: dev
+  - name: prod
+    clusterSelector:
+      matchLabels:
+        env: prod
+
